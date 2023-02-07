@@ -1,8 +1,8 @@
 const inputEl = document.querySelector('#validation-input');
-const validValue = Number(inputEl.getAttribute('data-length'));
+const validValue = inputEl.getAttribute('data-length');
 
 inputEl.addEventListener('blur', () => {
-  inputEl.value.length === validValue
-    ? inputEl.classList.toggle('valid')
-    : inputEl.classList.toggle('invalid');
+  inputEl.value.length === Number(validValue)
+    ? inputEl.classList.add('valid')
+    : inputEl.classList.add('invalid');
 });
