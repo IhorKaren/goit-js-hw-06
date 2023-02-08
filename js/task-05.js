@@ -3,10 +3,10 @@ const nameEl = document.querySelector('#name-output');
 
 inputEl.addEventListener('input', onInputChange);
 
-function onInputChange (event) {
-    nameEl.textContent = event.currentTarget.value;
-    
-    if (nameEl.textContent.length === 0) {
-        nameEl.textContent = 'Anonymous'
-    };
-};
+function onInputChange(event) {
+  nameEl.textContent = event.currentTarget.value.trim();
+
+  if (nameEl.textContent.length === 0) {
+    nameEl.textContent = 'Anonymous';
+  }
+}

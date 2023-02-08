@@ -9,9 +9,12 @@ function onFormSubmit(event) {
     elements: { email, password },
   } = event.currentTarget;
 
-  if (email.value === '' || password.value === '') {
-    alert('All fields must be filled!');
+  if (email.value.trim() === '' || password.value === '') {
+    return alert('All fields must be filled!');
   }
-  console.log(`Login: ${email.value}, Password: ${password.value}`);
+  console.log({
+    login: email.value,
+    password: password.value,
+  });
   event.currentTarget.reset();
 }
