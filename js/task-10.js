@@ -22,7 +22,7 @@ function createBoxes(amount) {
   let defaultSize = 30;
   let newSize = 0;
 
-  for (let i = 0; i <= amount; i += 1) {
+  for (let i = 0; i < amount; i += 1) {
     let box = document.createElement('div');
     newSize = defaultSize + i * 10;
     box.style = `width: ${newSize}px; height: ${newSize}px; 
